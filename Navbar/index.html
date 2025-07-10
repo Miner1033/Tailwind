@@ -1,0 +1,93 @@
+<!doctype html>
+<!-- Declares this is an HTML5 document -->
+
+<html lang="en">
+<!-- Sets the language of the document to English -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Character encoding set to UTF-8, supports most characters including Bangla -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Makes page responsive so it scales well on mobile and desktop -->
+
+  <title>Tailwind Navbar Always Show Button</title>
+  <!-- Title shown on browser tab -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Loads Tailwind CSS library from CDN to use Tailwind utility classes -->
+
+  <script defer>
+    // JavaScript to toggle mobile menu visibility when button clicked
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menu-btn');      // Get the menu button
+      const mobileMenu = document.getElementById('mobile-menu'); // Get the mobile menu list
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');  // Show/hide mobile menu on button click
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gray-100">
+<!-- Body with light gray background -->
+
+  <!-- Navbar Start -->
+  <nav class="bg-blue-600 shadow-md">
+  <!-- Navbar with dark blue background and shadow -->
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Container: max width 7xl, centered horizontally, padding on sides -->
+
+      <div class="flex justify-between h-16 items-center">
+      <!-- Flexbox container to space items horizontally,
+           height 16 (4rem), vertically center items -->
+
+        <!-- Logo -->
+        <div class="text-white font-bold text-2xl">
+          Learn ML With Miner
+          <!-- White bold large text for logo/title -->
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 text-white font-medium">
+          <!-- Menu hidden on small screens, flex visible on medium+ screens,
+               spacing of 6 between items, white medium font -->
+
+          <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+          <!-- Menu item with hover color change -->
+
+          <li><a href="#" class="hover:text-yellow-300">Menu</a></li>
+          <li><a href="#" class="hover:text-yellow-300">Setting</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button - always visible -->
+        <div>
+          <button id="menu-btn" class="text-3xl text-white p-2 bg-red-400 rounded-md">
+            &#9776;
+            <!-- Hamburger icon (three horizontal lines),
+                 white text, big size, red background, padding, rounded corners -->
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <ul id="mobile-menu" class="hidden md:hidden text-white font-medium mt-2 space-y-2">
+      <!-- Mobile menu list: hidden by default,
+           hidden again on medium screens and above,
+           white font, medium weight,
+           margin-top 2 (0.5rem), vertical spacing between list items -->
+
+        <li><a href="#" class="block px-2 py-1 hover:text-yellow-300">Home</a></li>
+        <!-- Block links with padding and hover color -->
+
+        <li><a href="#" class="block px-2 py-1 hover:text-yellow-300">Menu</a></li>
+        <li><a href="#" class="block px-2 py-1 hover:text-yellow-300">Setting</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+</body>
+</html>
