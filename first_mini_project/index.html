@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Declares this is an HTML5 document -->
+
+<html lang="en">
+<!-- The page is written in English -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Character encoding set to UTF-8 (supports all characters like English, Bangla, emoji, etc.) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page responsive on all devices -->
+
+    <title>Tailwind CSS via CDN</title>
+    <!-- Sets the title shown on the browser tab -->
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Loads Tailwind CSS from the internet so you can use Tailwind utility classes -->
+</head>
+
+<body>
+<!-- This is the main body of the webpage -->
+
+   <div class="min-h-screen flex items-center justify-center bg-gray-100">
+   <!--
+   min-h-screen: height will be full screen
+   flex: use flexbox layout
+   items-center: vertically center the content
+   justify-center: horizontally center the content
+   bg-gray-100: light gray background
+   -->
+
+   <div class="bg-white p-8 rounded-xl shadow-lg max-w-sm text-center">
+   <!--
+   bg-white: white background
+   p-8: padding on all sides (space inside)
+   rounded-xl: rounded corners (extra large)
+   shadow-lg: large shadow (for card effect)
+   max-w-sm: max width = small
+   text-center: center-align text inside
+   -->
+
+   <h2 class="text-2xl font-bold text-green-800 tracking-wide mb-2">Pro Plan</h2>
+   <!--
+   text-2xl: font size is extra large
+   font-bold: bold text
+   text-green-800: dark green text color
+   tracking-wide: space between letters is slightly wide
+   -->
+<p class="text-gray-600 leading-relaxed mb-4">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, cupiditate.
+</p>
+<div class="text-4xl font-bold text-blue-900 mb-6">
+    999৳ <span class="text-sm text-gray-500">/mo</span>
+
+    <ul class="text-left text-gray-700 mt-4 space-y-2 text-sm">
+        <li>✅ Unlimited Projects</li>
+        <li>✅ 100 GB Storage</li>
+        <li>✅ Priority Support</li>
+    </ul>
+<button class="bg-blue-600 text-white text-sm px-3 py-1.5 rounded hover:bg-red-700 duration-300 mt-4">
+    <!--
+    bg-blue-600: blue background
+    text-white: white text color
+    text-sm: small font size
+    px-3 py-1.5: padding on x-axis and y-axis
+    rounded: rounded corners
+    hover:bg-blue-700: darker blue on hover
+    duration-200: smooth transition effect on hover
+    mt-4: margin top for spacing
+    -->
+  Get Started
+</button>
+
+</div>
+
+
+   </div>
+</body>
+</html>
