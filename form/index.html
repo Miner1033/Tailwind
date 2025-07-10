@@ -1,0 +1,103 @@
+<!doctype html>
+<!-- This declares the document type is HTML5 -->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- This ensures correct character encoding, supports Bangla, English, etc. -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the form responsive on mobile and desktop -->
+
+  <link href="./output.css" rel="stylesheet">
+  <!-- Linking to your Tailwind CSS output file -->
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen px-4">
+<!-- 
+  bg-gray-100: light gray background
+  flex: enables flex layout
+  items-center: vertically center content
+  justify-center: horizontally center
+  min-h-screen: minimum height = full screen
+  px-4: padding on left/right
+-->
+
+  <form class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg space-y-6">
+  <!-- 
+    bg-white: white background for the form
+    p-8: padding inside the form
+    rounded-lg: rounded corners
+    shadow-md: medium shadow
+    w-full: full width on small screens
+    max-w-lg: max width on large screens
+    space-y-6: vertical space between child elements
+  -->
+
+    <h2 class="text-2xl font-bold text-center text-gray-800">Contact Us</h2>
+    <!-- 
+      text-2xl: large font
+      font-bold: bold text
+      text-center: center align text
+      text-gray-800: dark gray color
+    -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- 
+      grid: use grid layout
+      grid-cols-1: one column on small devices
+      md:grid-cols-2: two columns on medium+ devices
+      gap-4: gap between columns
+    -->
+
+      <input type="text" placeholder="First Name" class="w-full border border-blue-800 rounded-md px-4 py-2" />
+      <!-- 
+        w-full: input takes full width
+        border border-blue-800: blue border
+        rounded-md: medium rounded corners
+        px-4 py-2: horizontal and vertical padding
+      -->
+
+      <input type="text" placeholder="Last Name" class="w-full border border-blue-800 rounded-md px-4 py-2" />
+    </div>
+
+    <input type="email" placeholder="Email" class="w-full border border-blue-800 rounded-md px-4 py-2" />
+    <!-- Email input field (full width with padding and border) -->
+
+    <textarea rows="5" placeholder="Enter Your Message" class="w-full border border-blue-800 rounded-md px-4 py-2"></textarea>
+    <!-- 
+      rows="5": 5 lines height
+      textarea for message with styling same as input
+    -->
+
+    <label class="inline-flex items-center space-x-2">
+    <!-- 
+      inline-flex: label and checkbox side by side
+      items-center: vertically align center
+      space-x-2: space between checkbox and text
+    -->
+
+      <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600 border-blue-800 rounded" />
+      <!-- 
+        checkbox with blue color and border
+        h-5 w-5: height and width
+        rounded: slightly rounded corners
+      -->
+
+      <span class="text-gray-700">I agree to the terms and conditions</span>
+      <!-- Checkbox label -->
+    </label>
+
+    <button type="submit" class="w-full bg-blue-500 rounded-2xl">
+      Submit
+    </button>
+    <!-- 
+      w-full: button takes full width
+      bg-blue-500: blue background
+      rounded-2xl: large rounded corners
+    -->
+
+  </form>
+
+</body>
+</html>
